@@ -20,8 +20,8 @@ const ScrollHighlight = defineComponent({
       reactiveTextList.forEach((ele, index) => {
         ScrollTrigger.create({
           trigger: ele,
-          start: "top, 50%",
-          end: 'bottom, 50%',
+          start: `center ${50 - index}%`,
+          end: `bottom ${50 - index}%`,
           onEnter() {
             activeIndex.value = index
           },
